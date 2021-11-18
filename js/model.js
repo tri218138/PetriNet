@@ -7,7 +7,7 @@ var text_attr_tn = { "fill": "white", "font-size": "12", "font-family": "Arial",
 var arrow_attr = {fill: "blue", "stroke-width": 2, stroke: "blue"};
 var arrow_on_flow = {fill: "blue", "stroke-width": 2, stroke: "yellow"}
 var drag_on_attr = { "stroke": "blue", "stroke-width": "4" };
-var text_label_place = { "fill": "blue", "font-size": "18", "font-family": "Arial", "font-weight": "bold", 'text-anchor':'start' };
+var text_label_place = { "fill": "blue", "font-size": "18", "font-family": "Arial", "font-weight": "bold", 'text-anchor':'center' };//start, end
 var text_label_transition = { "fill": "red", "font-size": "18", "font-family": "Arial", "font-weight": "bold", 'text-anchor':'center' };
 
 var PL_RADIUS = 25;
@@ -161,7 +161,7 @@ class Place{
         this.tokens = [];
         this.inDegree = [];
         this.outDegree = [];
-        paper.text(x0 + PL_RADIUS / 2 , y0 + PL_RADIUS + 10, label).attr(text_label_place);
+        paper.text(x0 , y0 - PL_RADIUS - 10, label).attr(text_label_place);
         //this.outDegreeArrow = [];
         draw_tokens(this);
         t.x = x0; t.y = y0;
