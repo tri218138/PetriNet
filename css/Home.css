@@ -1,0 +1,48 @@
+img{
+    width: 100px;
+    margin: 2em;
+    display: block;
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+}
+.col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer{
+    background-color: #0795DF;
+    position: absolute;
+    box-sizing: border-box;
+    color: white;
+    padding: 2em;
+    width: 100%;
+    bottom: 0px;
+    height: 10em;
+}
+.nav-link{
+    color: white !important;
+}
+.nav-link:hover{
+    transform: rotate(10deg);
+    color: white !important;
+    transition: 0.8s;
+}
+.option {
+    padding: 5px;
+}
+.option button{
+    background-color: #0795DF;
+    color: white;
+    
+}
+#process{
+    display: block;
+    color: #0795DF;
+    background-color: rgb(199, 249, 255);
+    width: 100%;
+    height: 500px;
+}

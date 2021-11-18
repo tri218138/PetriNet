@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" media="all" href="css/reset.css" /> <!-- reset css -->
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+
+<style>
+    body{ background-color: ivory; }
+    canvas{border:1px solid red;}
+</style>
+
+<script>
+$(function(){
+
+    var canvas=document.getElementById("canvas");
+    var ctx=canvas.getContext("2d");
+
+    var canvasOffset=$("#canvas").offset();
+    var offsetX=canvasOffset.left;
+    var offsetY=canvasOffset.top;
+
+    function draw(x,y){
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+        ctx.beginPath();
+        ctx.fillStyle="skyblue";
+        ctx.strokeStyle="gray";
+        ctx.rect(x,y,30,20);
+        ctx.fill();
+        ctx.stroke();
+    }
+
+    function handleMouseDown(e){
+      mouseX=parseInt(e.clientX-offsetX);
+      mouseY=parseInt(e.clientY-offsetY);
+      $("#downlog").html("Down: "+ mouseX + " / " + mouseY);
+
+      // Put your mousedown stuff here
+      draw(mouseX,mouseY);
+
+    }
+
+    $("#canvas").mousedown(function(e){handleMouseDown(e);});
+
+    // start the rect at [10,10]
+    draw(10,10);
+
+
+}); // end $(function(){});
+</script>
+
+</head>
+
+<body>
+    <p>Click to redraw the rect at the mouse position</p>
+    <p id="downlog">Down</p>
+    <canvas id="canvas" width=300 height=300></canvas>
+
+</body>
+</html>
