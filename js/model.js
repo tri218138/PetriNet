@@ -1,5 +1,4 @@
-var PAPER_WIDTH = 1500;
-var PAPER_HEIGHT = 600;
+
 var place_attr = { "fill": "white", "stroke": "#0795DF", "stroke-width": "2" };
 var trans_attr = { "fill": "white", "stroke": "#0795DF", "stroke-width": "2" };
 var token_attr = { "fill": "blue", "stroke": "blue", "stroke-width": "0" };
@@ -17,9 +16,10 @@ var x0 = 100;
 var y0 = 75;
 var path_length = 4*PL_RADIUS;
 
+var speed = 500;
+
 var place_node = [];
 var tran_node = [];
-
 var arrow_flow_animate = [];
 
 var Selected = null;
@@ -197,7 +197,7 @@ class Place{
                     
                     //this.outDegreeArrow[i.id]
                     var path = paper.path(`M${this.x},${this.y}`).attr(arrow_on_flow);                    
-                    path.animate({path:`M${this.x},${this.y}L${i.x}, ${i.y}`},1000).toFront();
+                    path.animate({path:`M${this.x},${this.y}L${i.x}, ${i.y}`},speed).toFront();
                     arrow_flow_animate.push(path);
                     
                     remove_tokens(i);
@@ -237,14 +237,14 @@ class Transition{
             //draw_tokens(this);
             for (let i of this.outDegree) {
                 var path = paper.path(`M${this.x},${this.y}`).attr(arrow_on_flow);                    
-                path.animate({path:`M${this.x},${this.y}L${i.x}, ${i.y}`},1000).toFront();
+                path.animate({path:`M${this.x},${this.y}L${i.x}, ${i.y}`},speed).toFront();
                 arrow_flow_animate.push(path);
 
                 setTimeout(function() { 
                     remove_tokens(i);
                 i.tokens.push({});
                 draw_tokens(i);
-                }, 1000)
+                }, speed)
                 // remove_tokens(i);
                 // i.tokens.push({});
                 // draw_tokens(i);
@@ -351,13 +351,13 @@ function mainProcessFlow() {
         acceptFlow();
         for (var i of place_node) i.flowTransition();
         mainProcessFiring();
-    }, 1000)
+    }, speed)
 }
 function mainProcessFiring() {        
     setTimeout(function() { 
         for (var i of tran_node) i.firing();
         waitingFiring();       
-    }, 1000)
+    }, speed)
 }
 function waitingFiring(){
     setTimeout(function() { 
@@ -368,5 +368,5 @@ function waitingFiring(){
         else{
             alert("process done!");
         }         
-    }, 1000)
+    }, speed)
 }

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/theory.css">
+    <link rel="stylesheet" href="reset.css">
+    <title>Petri-Net Model</title>
+</head>
+
+<body>
+    <header class="navbar">
+        <img src="Image/bklogo.png" class="bku-symbol">
+        <div class="navbar--wrapper--text">
+            <h2 style="font-family: 'Comic Sans MS', cursive, sans-serif;color: white;font-weight: bold;">RENAME</h2>
+        </div>
+        <div class="navbar--wrapper">
+            <a href="About.html">Team</a>
+        </div>
+        <div class="navbar--wrapper">
+            <a href="Theory.html">Theory</a>
+        </div>
+        <div class="navbar--wrapper">
+            <a href="Model.html">Model</a>
+        </div>
+        <div class="navbar--wrapper">
+            <a class="activated" href="index.html">Intro</a>
+        </div>
+    </header>
+
+    <div class="theory">
+        <section id="Intro">
+            <!-- <h1>INTRODUCTION TO MODEL</h1>
+            <hr> -->
+            <h2>Components of Model</h2>
+            <table border="2" id="tableofsymbol">
+                <tr class="symbol">
+                    <td>Symbol</td>
+                    <td>Name</td>
+                    <td>Application</td>
+                </tr>
+                <tr class="place">
+                    <td>
+                        <div class="circle"></div>
+                    </td>
+                    <td>Place</td>
+                    <td>
+                        <p>A place 𝑝 is represented by a circle or ellipse. A place 𝑝 always models a passive component.</p>
+                        <p>
+                            𝑝 can store, accumulate or show things. A place has discrete states</p>
+                    </td>
+                </tr>
+                <tr class="transition">
+                    <td>
+                        <div class="square"></div>
+                    </td>
+                    <td>Transition</td>
+                    <td>
+                        <p>A transition 𝑡 is represented by a square or rectangle. A transition 𝑡 always models an active component.</p>
+                        <p>
+                            𝑡 can produce things/tokens, consume, transport or change them through the Firing mechanism </p>
+                    </td>
+                </tr>
+                <tr class="arrow">
+                    <td>
+                        <img src="Image\Profile\arrow.png" alt="">
+                    </td>
+                    <td>Arrow</td>
+                    <td>
+                        <p>Places and transitions are connected to each other by directed arcs, graphically, represented by an arrow</p>
+                        <p>An arc never models a system component, sometimes only notional relation between components such as logical connections</p>
+                    </td>
+                </tr>
+                <tr class="token">
+                    <td>
+                        <div class="dot"></div>
+                    </td>
+                    <td>Token</td>
+                    <td>
+                        <p>A token is a special transition node, being graphically rendered as a black dot.</p>
+                        <p>Symbolic tokens generally denote elements of the real world. Places can contain tokens, and transitions cannot</p>
+                    </td>
+                </tr>
+                <tr class="module">
+                    <td><a href="http://staff.um.edu.mt/jskl1/petrisim/pnexamps.html">Example</a></td>
+                    <td>Model</td>
+                    <td>
+                        <p>Network is static and composed of place and transitions.</p>
+                        <p>Places hold tokens.</p>
+                        <p>Transitions produce and/or consume tokens</p>
+                    </td>
+                </tr>
+            </table>
+
+            <p></p>
+        </section>
+    </div>
+    <!-- scroll-bar -->
+    <div class="function">
+        <h2>Functions of Model</h2>
+        <table border="2" id="tableoffunction">
+            <tr class="title">
+                <td>Button</td>
+                <td>Application</td>
+            </tr>
+            <tr class="run">
+                <td>Run</td>
+                <td>
+                    <p>Run the pre-built program built on the Petri-Net model of doctors and patients</p>
+                    <p>When the program runs successfully, it will say "process done! ".When deadlock-free the program will stop and display the message "deadlock-free"</p>
+                </td>
+            </tr>
+            <tr class="addToken">
+                <td>Add Token</td>
+                <td>
+                    <p>Select a place and then press the button to add the token to that place.</p>
+                    <p>With the number of places less than 10, the token will show a black dot. Opposite,For places greater than 10, tokens will be displayed as quantity</p>
+                </td>
+            </tr>
+            <tr class="Removetoken">
+                <td>Remove Token</td>
+                <td>
+                    <p>Select a place and then press the button to delete the token in that place.</p>
+                    <p>Can't delete place with token number less than 1 </p>
+                </td>
+            </tr>
+            <tr class="speed">
+                <td>Speed</td>
+                <td>
+                    <p>Increase the speed of the "animation arrow" effect </p>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+    <div class="reference">
+        <h2>Reference</h2>
+        <table border="2" id="tableofref">
+            <tr class="title">
+                <td>Web</td>
+                <td>Description</td>
+                <td>Link</td>
+            </tr>
+            <tr>
+                <td>Raphaël</td>
+                <td>
+                    <p>Use to draw circles, squares, arrows, .. in JS</p>
+                    <p>In team model, it is used to represent symbols: "place", "transition", "arrow", "token",... </p>
+                </td>
+                <td><a href="">Raphaël Github</a></td>
+            </tr>
+            <tr>
+                <td>Petri Net Simulator</td>
+                <td>
+                    <p>Simulation support for all Petri-Net models.</p>
+                    <p>Create reference source for Petri-Net web functions. </p>
+                </td>
+                <td>
+                    <a href="http://petri.hp102.ru/">PN-simulator</a>
+                </td>
+            </tr>
+        </table>
+        <p></p>
+    </div>
+    <footer>
+        <div class="address ">
+            <h1>Đại học Bách Khoa CS2</h1>
+            <h3>Khu Đại học Quốc Gia Tp.HCM, Dĩ An, Bình Dương</h3>
+            <h3>Copyright &copy; 2021</h3>
+        </div>
+        <div class="description ">
+            <h1>Khoa Khoa học và Kỹ thuật máy tính</h1>
+
+            <h3 class="teacher ">Giảng viên hướng dẫn: Nguyễn An Khương</h1>
+                <h3 class="teacher ">Giảng viên hướng dẫn: Nguyễn Tiến Thịnh</h1>
+        </div>
+        <div class="contact ">
+            <h1>Liên hệ với chúng tôi!</h1>
+            <h3>Team Rename</h3>
+            <a href="About.html ">
+                <h1>Tại đây</h1>
+            </a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

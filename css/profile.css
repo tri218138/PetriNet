@@ -1,0 +1,134 @@
+* {
+    font-family: Candara;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: white;
+    font-size: 1.6rem;
+    font-weight: 1000;
+    font-style: bold;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    left: 0;
+    float: left;
+    /* Height of the footer */
+    background-color: #212529;
+}
+
+.container {
+    display: block;
+    width: 100%;
+}
+
+.container .card {
+    background-image: linear-gradient( rgb(0, 167, 162), rgba(0, 0, 0, 0.794));
+    display: inline-block;
+    width: 270px;
+    height: 430px;
+    margin-top: 130px;
+    margin-left: 20px;
+    border-radius: 20px;
+}
+
+
+/* .container .background_header {
+    width: 270px;
+    height: 150px;
+    background-image: linear-gradient(#212529, rgb(0, 167, 162));
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+} */
+
+.container .card img {
+    width: 17rem;
+    height: 17rem;
+    display: inline-block;
+    object-fit: cover;
+    margin-left: 5rem;
+    margin-top: 50px;
+    border-radius: 150px;
+}
+
+.container .card .description {
+    color: white;
+    margin-left: 0.1rem;
+    width: 27.3rem;
+    height: 8rem;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.container .card .contact {
+    width: 300px;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.container .card .contact .facebook {
+    display: inline-block;
+    background-color: #273b7a;
+    width: 100px;
+    color: white;
+    border-radius: 150px;
+    margin-left: -2.5rem;
+    text-decoration: none;
+}
+
+.container .card .contact .gmail {
+    display: inline-block;
+    background-color: #ea4335;
+    width: 100px;
+    color: white;
+    margin-left: 3rem;
+    border-radius: 150px;
+    text-decoration: none;
+}
+
+.card .contact a .caption {
+    display: block;
+    /* margin: 4% 15% 0; */
+    font-size: 1.2rem;
+    font-weight: bold;
+    /* margin-top: -6rem; */
+    /* margin-left: 2rem; */
+}
+
+
+/* .card .contact .caption .logo {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    margin-left: -39px;
+} */
+
+.contact .gmail:hover {
+    background-color: white;
+    color: #ea4335;
+    transition: transform 0.2s;
+    transform: scale(1.2);
+}
+
+.contact .facebook:hover {
+    background-image: url("../Image/Profile/gradient.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform 0.2s;
+    transform: scale(1.2);
+}
+
+.container .card:hover {
+    background-color: black;
+    transition: transform 1.2s;
+    transform: scale(1.1);
+}
