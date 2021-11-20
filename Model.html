@@ -17,6 +17,21 @@
             cursor: pointer;
             color: white;
         }
+        input[type='range'] {
+            overflow: hidden;
+            -webkit-appearance: none;
+            background-color: #000000;
+            margin: 1em;
+            color: white;
+            height: 15px;
+        }
+        input[type='range']::-webkit-slider-thumb {
+            width: 10px;
+            -webkit-appearance: none;
+            height: 10px;
+            cursor: ew-resize;
+            background: #ffffff;
+        }
     </style>
 </head>
 
@@ -43,9 +58,10 @@
         <button value="Run" id="Run" onclick="mainProcessFlow()">Run</button>
         <button value="Token" id="addToken" onclick="token_add()">Add token</button>
         <button value="Token" id="removeToken" onclick="token_remove()">Remove token</button>
+        <input id="changeSpeed" type="range" value="1000" min="0" max="2000" onchange="changeSpeed(this.value)"><br>
     </div>
     <div id="process" style="margin:1em;"></div> 
-    <script > 
+    <script >         
         var PAPER_WIDTH = window.screen.width;
         var PAPER_HEIGHT = window.screen.height;
         console.log(PAPER_HEIGHT,PAPER_WIDTH);
