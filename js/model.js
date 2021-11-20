@@ -370,3 +370,7 @@ function waitingFiring(){
         }         
     }, speed)
 }
+function changeSpeed(value)
+{
+    speed = value;
+}
