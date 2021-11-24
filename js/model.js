@@ -9,10 +9,10 @@ var drag_on_attr = { "stroke": "blue", "stroke-width": "4" };
 var text_label_place = { "fill": "blue", "font-size": "18", "font-family": "Arial", "font-weight": "bold", 'text-anchor':'center' };//start, end
 var text_label_transition = { "fill": "red", "font-size": "18", "font-family": "Arial", "font-weight": "bold", 'text-anchor':'center' };
 
-var PL_RADIUS = 25;
+var PL_RADIUS = 35;
 var TR_WIDTH = 2*PL_RADIUS;
 var TN_RADIUS = 4;
-var x0 = 100;
+var x0 = window.screen.width / 2 - 8 * PL_RADIUS;
 var y0 = 75;
 var path_length = 4*PL_RADIUS;
 

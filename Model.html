@@ -10,10 +10,8 @@
     <style>
         button{
             background-color: black;
-            width: 100px;
+            width: 15rem;
             height: 28px;
-            margin: 1em;
-            margin-top: 2em;
             cursor: pointer;
             color: white;
         }
@@ -21,9 +19,9 @@
             overflow: hidden;
             -webkit-appearance: none;
             background-color: #000000;
-            margin: 1em;
             color: white;
             height: 15px;
+            width: 15rem;
         }
         input[type='range']::-webkit-slider-thumb {
             width: 10px;
@@ -54,20 +52,19 @@
             <a class="activated" href="index.html">Intro</a>
         </div>
     </header>
-    <div class="option" style="background-color: rgb(255, 255, 255); z-index: 10 !important;">
+    <div class="option" style="background-color: rgb(255, 255, 255); z-index: 10 !important; float: right;">
         <button value="Run" id="Run" onclick="mainProcessFlow()">Run</button>
         <button value="Token" id="addToken" onclick="token_add()">Add token</button>
         <button value="Token" id="removeToken" onclick="token_remove()">Remove token</button>
         <input id="changeSpeed" type="range" value="1000" min="0" max="2000" onchange="changeSpeed(this.value)"><br>
     </div>
-    <div id="process" style="margin:1em;"></div> 
+    <div id="process" style="padding:0em;"></div> 
     <script >         
-        var PAPER_WIDTH = window.screen.width-100;
-        var PAPER_HEIGHT = window.screen.height;
+        var PAPER_WIDTH = window.screen.width;
+        var PAPER_HEIGHT = window.screen.height - 300;
         console.log(PAPER_HEIGHT,PAPER_WIDTH);
         var paper = Raphael("process", PAPER_WIDTH, PAPER_HEIGHT); 
-        mainFunction(paper);
-            
+        mainFunction(paper);            
     </script>     
     <footer>
         <div class="address">
