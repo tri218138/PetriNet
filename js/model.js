@@ -334,7 +334,7 @@ function token_remove() {
         RemoveToken(place_node[Selected.node.id]);
     }
     else {
-        set_status("No selected placed.");
+        set_status("No selected Place.");
     }
 }
 function RemoveToken(place) { // remove 1 token: xóa hết tokens (hình ảnh), pop trong mảng token -> vẽ lại
@@ -366,7 +366,7 @@ function waitingFiring(){
             mainProcessFlow();            
         }
         else{
-            alert("process done!");
+            alert("Process done!");
         }         
     }, speed)
 }
